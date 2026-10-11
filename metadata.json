@@ -1,0 +1,6 @@
+{
+  "name": "VieNeu-TTS - Vietnamese Neural Speech Studio",
+  "description": "Advanced Vietnamese Neural Text-to-Speech studio and voice cloning platform powered by VieNeu-TTS architecture, featuring 48kHz synthesis, 23+ regional preset voices, emotion cues, and OpenAI-compatible API.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

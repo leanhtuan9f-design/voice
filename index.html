@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VieNeu-TTS - Vietnamese Neural Speech Studio</title>
+    <meta name="description" content="Advanced Vietnamese Neural Text-to-Speech studio and voice cloning platform powered by VieNeu-TTS architecture, featuring 48kHz synthesis, 23+ regional preset voices, emotion cues, and OpenAI-compatible API." />
+    <meta property="og:title" content="VieNeu-TTS - Vietnamese Neural Speech Studio" />
+    <meta property="og:description" content="Advanced Vietnamese Neural Text-to-Speech studio and voice cloning platform powered by VieNeu-TTS architecture, featuring 48kHz synthesis, 23+ regional preset voices, emotion cues, and OpenAI-compatible API." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      // Ensure window.fetch has both getter and setter so Chrome extensions and interceptors can override it without TypeError
+      (function() {
+        try {
+          var originalFetch = window.fetch;
+          var _currentFetch = originalFetch ? originalFetch.bind(window) : undefined;
+          Object.defineProperty(window, 'fetch', {
+            configurable: true,
+            enumerable: true,
+            get: function() {
+              return _currentFetch;
+            },
+            set: function(fn) {
+              _currentFetch = fn;
+            }
+          });
+        } catch (e) {
+          // ignore
+        }
+
+        // Catch and prevent unhandled extension-injection errors
+        window.addEventListener('error', function(event) {
+          if (event && (
+            (event.filename && event.filename.indexOf('chrome-extension://') !== -1) ||
+            (event.message && event.message.indexOf('Cannot set property fetch of #<Window>') !== -1)
+          )) {
+            event.preventDefault();
+            event.stopImmediatePropagation();
+            return true;
+          }
+        }, true);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
